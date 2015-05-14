@@ -18,16 +18,16 @@ FROM theqvd/qvdimageubuntu:minimal
 MAINTAINER The QVD <docker@theqvd.com>
 
 LABEL version="1.0"
-LABEL description="This is a basic desktop Ubuntu VM image installation for QVD. It includes LibreOffice and a Firefox"
+LABEL description="This is a basic desktop Ubuntu VM image installation for QVD. It includes LibreOffice, Thunderbird, Firefox and Evince"
 
 ENV DEBIAN_FRONTEND noninteractive
 # packages
 RUN echo "deb http://archive.canonical.com/ubuntu trusty partner" > /etc/apt/sources.list.d/partners.list
 RUN apt-get update && apt-get install -y \
   xfce4-desktop \
-  acroread-bin \
   adobe-flashplugin \
   cups \
+  evince \
   firefox \
   libreoffice \
   icedtea-7-plugin \

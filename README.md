@@ -7,7 +7,7 @@ It is a basic desktop with:
  * Libreoffice
  * Firefox
  * Thunderbird
- * Acrobat Reader
+ * Evince
 
 To create the tar.gz file importable into QVD please use the following
 commands:
