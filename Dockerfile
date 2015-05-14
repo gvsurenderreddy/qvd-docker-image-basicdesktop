@@ -23,7 +23,14 @@ LABEL description="This is a basic desktop Ubuntu VM image installation for QVD.
 ENV DEBIAN_FRONTEND noninteractive
 # packages
 RUN echo "deb http://archive.canonical.com/ubuntu trusty partner" > /etc/apt/sources.list.d/partners.list
-RUN apt-get update && apt-get install -y libreoffice firefox icedtea-7-plugin adobe-flashplugin thunderbird
+RUN apt-get update && apt-get install -y \
+  xfce4-desktop \
+  adobe-flashplugin \
+  cups \
+  firefox \
+  libreoffice \
+  icedtea-7-plugin \
+  thunderbird
 
 # Cleanup
 RUN echo "" > /etc/udev/rules.d/70-persistent-net.rules
