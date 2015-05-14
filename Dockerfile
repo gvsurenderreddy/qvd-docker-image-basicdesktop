@@ -25,6 +25,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN echo "deb http://archive.canonical.com/ubuntu trusty partner" > /etc/apt/sources.list.d/partners.list
 RUN apt-get update && apt-get install -y \
   xfce4-desktop \
+  acroread-bin \
   adobe-flashplugin \
   cups \
   firefox \
