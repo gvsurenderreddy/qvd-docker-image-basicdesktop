@@ -22,6 +22,7 @@ LABEL description="This is a basic desktop Ubuntu VM image installation for QVD.
 
 ENV DEBIAN_FRONTEND noninteractive
 # packages
+RUN echo "deb http://theqvd.com/packages/ubuntu QVD-3.5.0 main" > /etc/apt/sources.list.d/partners.list
 RUN apt-get update && apt-get install -y libreoffice firefox icedtea-7-plugin adobe-flashplugin
 
 # Cleanup
