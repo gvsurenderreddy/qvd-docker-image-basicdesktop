@@ -34,8 +34,8 @@ RUN apt-get update && apt-get install -y \
   perl-qvd-client \
   thunderbird
 # Config
-RUN mkdir -p /etc/skel/.config/xfce4/xfce-perchannel-xml/ 
-COPY xfce4-panel.xml xfce4-desktop.xml /etc/skel/.config/xfce4/xfce-perchannel-xml/
+RUN mkdir -p /etc/skel/.config/
+COPY xfce4 /etc/skel/.config/
 COPY vma.conf /etc/qvd/vma.conf
 COPY wallpaper-qvd.jpg /usr/share/wallpapers/
 # Cleanup
