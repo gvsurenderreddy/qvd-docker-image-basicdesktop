@@ -32,7 +32,8 @@ RUN apt-get update && apt-get install -y \
   libreoffice \
   icedtea-7-plugin \
   thunderbird
-
+# Config
+COPY vma.conf /etc/qvd/vma.conf
 # Cleanup
 RUN echo "" > /etc/udev/rules.d/70-persistent-net.rules
 RUN apt-get autoremove -y
