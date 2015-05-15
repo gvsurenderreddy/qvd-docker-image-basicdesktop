@@ -24,7 +24,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # packages
 RUN echo "deb http://archive.canonical.com/ubuntu trusty partner" > /etc/apt/sources.list.d/partners.list
 RUN apt-get update && apt-get install -y \
-  xfce4-desktop \
+  xubuntu-desktop \
   adobe-flashplugin \
   cups \
   evince \
