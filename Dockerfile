@@ -31,9 +31,13 @@ RUN apt-get update && apt-get install -y \
   firefox \
   libreoffice \
   icedtea-7-plugin \
+  perl-qvd-client \
   thunderbird
 # Config
+RUN mkdir -p /etc/skel/.config/xfce4/xfce-perchannel-xml/ 
+COPY xfce4-panel.xml xfce4-desktop.xml /etc/skel/.config/xfce4/xfce-perchannel-xml/
 COPY vma.conf /etc/qvd/vma.conf
+COPY wallpaper-qvd.jpg /usr/share/wallpapers/
 # Cleanup
 RUN echo "" > /etc/udev/rules.d/70-persistent-net.rules
 RUN apt-get autoremove -y
