@@ -35,8 +35,8 @@ RUN apt-get update && apt-get install -y \
   icedtea-7-plugin \
   thunderbird
 # Config
-RUN mkdir -p /etc/skel/.config/
-COPY xfce4 /etc/skel/.config/
+RUN mkdir -p /etc/skel/.config/xfce4/
+COPY xfce4/ /etc/skel/.config/xfce4/
 COPY vma.conf /etc/qvd/vma.conf
 COPY wallpaper-qvd.jpg /usr/share/wallpapers/
 # Cleanup
