@@ -39,6 +39,8 @@ RUN mkdir -p /etc/skel/.config/xfce4/
 COPY xfce4/ /etc/skel/.config/xfce4/
 COPY vma.conf /etc/qvd/vma.conf
 COPY wallpaper-qvd.jpg /usr/share/wallpapers/
+COPY qvdstartx.sh /usr/local/bin/qvdstartx.sh
+RUN chmod 755 /usr/local/bin/qvdstartx.sh
 # Cleanup
 RUN echo "" > /etc/udev/rules.d/70-persistent-net.rules
 RUN apt-get autoremove -y
