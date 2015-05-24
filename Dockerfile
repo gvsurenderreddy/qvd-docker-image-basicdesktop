@@ -29,6 +29,7 @@ RUN apt-get update && apt-get install -y \
   xubuntu-desktop \
   adobe-flashplugin \
   cups \
+  curl \
   evince \
   firefox \
   libreoffice \
@@ -40,7 +41,9 @@ COPY xfce4/ /etc/skel/.config/xfce4/
 COPY vma.conf /etc/qvd/vma.conf
 COPY wallpaper-qvd.jpg /usr/share/wallpapers/
 COPY qvdstartx.sh /usr/local/bin/qvdstartx.sh
-RUN chmod 755 /usr/local/bin/qvdstartx.sh
+COPY notify.sh /usr/local/bin/notify.sh
+COPY poweroff.sh /usr/local/bin/poweroff.sh
+RUN chmod 755 /usr/local/bin/qvdstartx.sh /usr/local/bin/notify.sh /usr/local/bin/poweroff.sh
 # Cleanup
 RUN echo "" > /etc/udev/rules.d/70-persistent-net.rules
 RUN apt-get autoremove -y
