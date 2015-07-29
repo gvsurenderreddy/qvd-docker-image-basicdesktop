@@ -18,7 +18,7 @@ FROM theqvd/qvdimageubuntu:minimal
 MAINTAINER The QVD <docker@theqvd.com>
 
 LABEL version="1.0"
-LABEL description="This is a basic desktop Ubuntu VM image installation for QVD. It includes LibreOffice, Thunderbird, Firefox and Evince"
+LABEL description="This is a basic desktop Ubuntu VM image installation for QVD. It includes XFCE, LibreOffice, Thunderbird, Firefox and Evince"
 
 ENV DEBIAN_FRONTEND noninteractive
 # packages
