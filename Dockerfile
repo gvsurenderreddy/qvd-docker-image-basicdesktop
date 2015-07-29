@@ -43,6 +43,7 @@ COPY wallpaper-qvd.jpg /usr/share/wallpapers/
 COPY qvdstartx.sh /usr/local/bin/qvdstartx.sh
 COPY notify.sh /usr/local/bin/notify.sh
 COPY poweroff.sh /usr/local/bin/poweroff.sh
+COPY XScreenSaver-nogl /etc/X11/app-defaults/XScreenSaver-nogl
 RUN chmod 755 /usr/local/bin/qvdstartx.sh /usr/local/bin/notify.sh /usr/local/bin/poweroff.sh
 # Cleanup
 RUN echo "" > /etc/udev/rules.d/70-persistent-net.rules
